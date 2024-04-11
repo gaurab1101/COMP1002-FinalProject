@@ -1,0 +1,79 @@
+/* CSS for Styling */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center; /* Center content horizontally */
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Make the image medium-sized */
+.main-content img {
+    width: 70%; /* Medium size */
+    max-width: 500px; /* Limiting maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,53 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Add header
+    const header = document.createElement('header');
+    header.innerHTML = `
+        <div class="logo">
+            <h1>Minolta X-700</h1>
+        </div>
+        <div class="nav-toggle">
+            <span>&#9776;</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    `;
+    document.body.prepend(header);
+
+    // Add footer
+    const footer = document.createElement('footer');
+    footer.innerHTML = `
+        <p>&copy; 2024 Minolta X-700. All rights reserved.</p>
+    `;
+    document.body.appendChild(footer);
+
+    // Toggle navigation menu for mobile view
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+
+    // JavaScript for product page buy button clicks
+    document.getElementById("buy-btn-black").addEventListener("click", function() {
+        alert("Added Minolta X-700 Black Version to cart!");
+    });
+
+    document.getElementById("buy-btn-lens").addEventListener("click", function() {
+        alert("Added Minolta X-700 with MD Lens to cart!");
+    });
+
+    document.getElementById("buy-btn-flash").addEventListener("click", function() {
+        alert("Added Minolta X-700 with Auto 280-PX Flash to cart!");
+    });
+
+    document.getElementById("buy-btn-rokkor").addEventListener("click", function() {
+        alert("Added Minolta X-700 with 50mm Rokkor f1.7 to cart!");
+    });
+
+    console.log("Header and footer added successfully.");
+});
